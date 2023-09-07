@@ -1,0 +1,2108 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url("https://use.typekit.net/ybx3gao.css");
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1;100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/* font-family: 'Hepta Slab', serif; */
+/* font-family: 'Courier Prime', monospace; */
+/* font-family: 'Bruno Ace', cursive; */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Secular One', sans-serif; */
+
+/* American Typewriter ITC Pro Light
+font-family: "itc-american-typewriter", serif;
+font-weight: 300;
+font-style: normal;
+
+American Typewriter ITC Pro Light Italic
+font-family: "itc-american-typewriter", serif;
+font-weight: 300;
+font-style: italic;
+
+American Typewriter ITC Pro Bold
+font-family: "itc-american-typewriter", serif;
+font-weight: 700;
+font-style: normal;
+
+American Typewriter ITC Pro Bold Italic
+font-family: "itc-american-typewriter", serif;
+font-weight: 700;
+font-style: italic;
+
+American Typewriter ITC Pro Light Condensed
+font-family: "itc-american-typewriter-cond", serif;
+font-weight: 300;
+font-style: normal;
+
+American Typewriter ITC Pro Bold Condensed
+font-family: "itc-american-typewriter-cond", serif;
+font-weight: 700;
+font-style: normal;*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hepta Slab', serif;
+}
+
+
+.header-wrapper{
+  position: relative;
+  width: 100%;
+  height: 145vh;
+}
+
+.main-logo{
+  top: 0;
+  right: 0;
+  position: relative;
+  z-index: 9;
+}
+
+.sub-menu-wrap{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu{
+  max-height: 600px;
+}
+
+.sub-menu{
+  background-color: orangered;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+}
+
+.user-info img{
+  max-width: 45%;
+  position: absolute;
+  top: -6%;
+  right: -7%;
+  transform: rotate(180deg);
+  animation: turn 1s linear;
+}
+
+/* @keyframes turn{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+} */
+
+.sub-menu-link{
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+
+.sub-menu-link p{
+  width: 100%;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.sub-menu-link p span{
+  color: white;
+}
+
+.sub-menu-link p:hover{
+  background-color: black;
+  color: orangered;
+  width: 100%;
+}
+
+main{
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  background-color: white;
+  /* box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); */
+}
+
+.orange-left{
+  max-width: 60%;
+  margin: 0 20px;
+}
+
+.orange-left-side{
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background-color: orangered;
+  z-index: -1;
+}
+
+.orange-left-side .orange-left-side-inner{
+  position: absolute;
+  top: 15%;
+  right: 0;
+  text-align: right;
+  font-size: 3rem;
+  color: white;
+  z-index: 20;
+}
+
+.orange-left-side .group-pic{
+  max-width: 125%;
+  position: absolute;
+  right: -55%;
+  top: 40%;
+  border-radius: 1rem;
+}
+
+.orange-left-side p{
+  position: absolute;
+  top: 33%;
+  left: 26%;
+  line-height: 1;
+  color: white;
+  font-size: 1.5em;
+  z-index: 10;
+}
+
+.logo{
+  width: 3%;
+  position: absolute;
+  top: 10px;
+  right: 7%;
+}
+
+.blank{
+  width: 100%;
+  position: relative;
+  margin-top: 10%;
+}
+
+.title p .is{
+  color: white;
+}
+
+.title p .mine{
+  color: orangered;
+}
+
+.title p{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  font-size: 6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  text-align: right;
+}
+
+.slider{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scrolling 20s linear infinite;
+  margin-left: -200px;
+}
+
+.marquee-content img{
+  height: 200px;
+  margin: 0 10px;
+}
+
+/* @keyframes scrolling {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+.marquee-content-oppo {
+  display: inline-block;
+  animation: scrollingr 20s linear infinite;
+  margin-left: -200px;
+}
+
+/* @keyframes scrollingr {
+  from{
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+} */
+
+.marquee-content-oppo img{
+  height: 200px;
+  margin: 0 10px;
+}
+
+.video-section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.video-section #slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+.video-section ul{
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  height: 20vh;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.video-section ul li{
+  list-style: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.video-section ul li video{
+  width: 230px;
+  transition: all 0.3s;
+}
+
+.video-section ul li video:hover{
+  transform: scale(1.1);
+}
+
+video{
+  width: 100%;
+  height: 100%;
+}
+
+.diverse-interest{
+  width: 100%;
+  height: 140vh;
+  position: relative;
+  left: 0;
+  top: 180px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.diverse-interest img{
+  position: absolute;
+  right: 0;
+  max-width: 65%;
+  transform: translateX(5%);
+  z-index: -1;
+}
+
+.diverse-interest p{
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  font-size: 2em;
+  margin: 0;
+  padding-top: 30px;
+  line-height: 1;
+}
+
+.diverse-interest .diverse-black{
+  font-size: 4rem; 
+  text-transform: uppercase; 
+  font-weight: bold;
+}
+
+.diverse-interest .interest-orange{
+  font-size: 4rem; 
+  text-transform: uppercase; 
+  font-weight: bold;
+  color: orangered;
+}
+
+.orange-right{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 100px;
+  margin-bottom: 15%;
+}
+
+.orange-right-divi{
+  display: flex;
+}
+
+.orange-right-img{
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+}
+
+.orange-right-img img{
+  max-width: 65%;
+}
+
+.orange-right-text{
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-align: end;
+}
+
+.black-float{
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 5%;
+  height: 40vh;
+  background-color: black;
+  font-size: 1.5em;
+}
+
+.orange-float{
+  position: absolute;
+  top: -10%;
+  right: 5%;
+  width: 65%;
+  height: 40vh;
+  background-color: orangered;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.orange-float p{
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.slider_two{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.marquee_two {
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content_two {
+  display: inline-block;
+  animation: scrollingtwo 30s linear infinite;
+  margin-left: -200px;
+}
+
+.marquee-content_two img{
+  height: 200px;
+  width: 400px;
+  margin: 0 10px;
+}
+
+/* @keyframes scrollingtwo {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+.marquee-content-oppo_two {
+  display: inline-block;
+  animation: scrollingtwor 30s linear infinite;
+  margin-left: -200px;
+}
+
+/* @keyframes scrollingtwor {
+  from{
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+} */
+
+.marquee-content-oppo_two img{
+  height: 200px;
+  width: 400px;
+  margin: 0 10px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.worked-with{
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.worked-with .white-patch{
+  position: absolute;
+  top: 0;
+  left: -310px;
+  width: 300px;
+  height: 50px;
+  background: white;
+  z-index: 10;
+}
+
+.worked-with p{
+  font-size: 2em;
+  color: orangered;
+  font-weight: bold;
+}
+
+.logo-box{
+  position: relative;
+  width: 100%;
+  height: 30vh;
+}
+
+.black-float-two{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+  background-color: black;
+}
+
+.orange-float-two{
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  background-color: orangered;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-block: auto;
+}
+
+.orange-float-two::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), orangered);
+  z-index: 5;
+}
+
+.orange-float-two::after{
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), orangered);
+  z-index: 5;
+}
+
+.logo-slide{
+  display: inline-flex;
+  animation: logoslide 10s linear infinite;
+  margin: 10px 0;
+}
+
+@keyframes logoslide {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-100%) ;
+  }
+}
+
+.orange-float-two img{
+  margin: 0 20px;
+}
+
+.employee-diag{
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  position: relative;
+}
+
+.left-about-us{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.left-about-us p{
+  margin-bottom: 0;
+  margin-top: 30px;
+  margin-left: -2rem;
+}
+
+.left-about-us p .something{
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.left-about-us p .about{
+  font-size: 3rem;
+  color: orangered;
+}
+
+.left-about-us p .us{
+  font-size: 8rem;
+  color: orangered;
+}
+
+.black-small-shadow{
+  z-index: 7;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.black-small-shadow .center-shadow{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 20%;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 50px;
+}
+
+.right-employee-carousel{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  padding: 20px;
+}
+
+.employee-container{
+  width: 100%;
+  height: 100%;
+}
+
+.view-box{
+  width: 700px;
+  height: 300px;
+  border-radius: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#testimonials{
+  display: flex;
+}
+
+.user-employee{
+  width: 800px;
+  text-align: center;
+  padding: 0 70px;
+  background-color: transparent;
+  border-radius: 200px;
+  position: relative;
+}
+
+.space{
+  margin: 0 50px;
+}
+
+.user-employee img{
+  max-width: 110px;
+  border-radius: 50%;
+  border: 10px solid white;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.user-employee p{
+  font-size: 1.2rem;
+  color: black;
+  line-height: 30px;
+  margin: 70px 60px 30px 20px;
+}
+
+.user-employee p::before{
+  content: '\201C';
+  font-size: 7.5rem;
+  height: 0;
+  display: inline-block;
+  vertical-align: -30px;
+  margin-right: 10px;
+  font-family: 'Secular One', sans-serif;
+  color: orangered;
+}
+
+.user-employee p::after{
+  content: '\201D';
+  font-size: 7.5rem;
+  height: 0;
+  display: inline-block;
+  vertical-align: -60px;
+  margin-left: 10px;
+  font-family: 'Secular One', sans-serif;
+  color: orangered;
+}
+
+.user-employee h5{
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.controls{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls span{
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 15px;
+  margin: 55px 5px 0 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.controls .active{
+  width: 45px !important;
+}
+
+.footer-top{
+  width: 100%;
+  height: 5vh;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.footer-top-text {
+  display: inline-flex;
+  animation: flowright 15s linear infinite;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+@keyframes flowright{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+.orange-footer-top{
+  color: orangered;
+  margin: 5px 5px;
+  font-size: 1rem;
+}
+
+.black-footer-top{
+  color: black;
+  margin: 5px 5px;
+  font-size: 1rem;
+}
+
+footer{
+  width: 100%;
+  height: 30vh;
+  background-color: black;
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+
+  .sub-menu-wrap{
+    width: 100%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: 1rem;
+    max-width: 30%;
+  }
+
+  .header-wrapper{
+    height: 110vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 2rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 120%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 40%;
+    font-size: 1.1rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: -10%;
+  }
+
+  .title p{
+    font-size: 4rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 5px 0;
+  }
+
+  .marquee-content img{
+    height: 125px;
+    margin: 0 3px;
+  }
+
+  .marquee-content-oppo img{
+    height: 125px;
+    margin: 0 3px;
+  }
+
+  .video-section{
+    height: 80vh;
+  }
+
+  .video-section ul{
+    bottom: -130px;
+  }
+  
+  .video-section ul li video{
+    width: 120px;
+  }
+
+  .diverse-interest{
+    height: 120vh;
+  }
+  
+  .diverse-interest p{
+    top: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 3rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 3rem; 
+  }
+
+  .orange-right{
+    height: 80vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 60%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 1rem;
+  }
+  
+  .black-float{
+    height: 35vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 35vh;
+    font-size: 1.1em;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 30vh;
+  } 
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 40vh;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 70vh;
+  }
+
+  .user-employee{
+    padding: 0 150px;
+  }
+
+  .user-employee p{
+    font-size: 0.75rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 30%;
+    top: 15%;
+  }
+
+  .left-about-us p .something{
+    font-size: 1.5rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 2.5rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 5rem;
+    margin-left: -2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+  .sub-menu-wrap{
+    width: 50%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: .5rem;
+    margin-right: -1rem;
+    max-width: 50%;
+  }
+
+  .header-wrapper{
+    height: 100vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 3rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 120%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 38%;
+    font-size: 1.5rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: -10%;
+  }
+
+  .title p{
+    font-size: 5rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 10px 0;
+  }
+
+  .marquee-content img{
+    height: 180px;
+    margin: 0 10px;
+  }
+
+  .marquee-content-oppo img{
+    height: 180px;
+    margin: 0 10px;
+  }
+
+  .video-section{
+    height: 80vh;
+  }
+
+  .video-section ul{
+    bottom: -150px;
+  }
+  
+  .video-section ul li video{
+    width: 170px;
+  }
+
+  .diverse-interest{
+    height: 120vh;
+  }
+  
+  .diverse-interest p{
+    top: 10%;
+    font-size: 2rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 4rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 4rem; 
+  }
+  .orange-right{
+    height: 80vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 60%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 1.4rem;
+  }
+  
+  .black-float{
+    height: 35vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 35vh;
+    font-size: 1.5rem;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 30vh;
+  } 
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 30vh;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 60vh;
+  }
+
+  .user-employee{
+    padding: 0 90px;
+  }
+
+  .user-employee p{
+    font-size: 1rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 33%;
+    top: 20%;
+  }
+
+  .left-about-us p .something{
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 3rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 6rem;
+    margin-left: -2rem;
+  }
+}
+
+/* @media (min-width: 1025px) and (max-width: 1399px){
+
+  .sub-menu-wrap{
+    width: 50%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: .5rem;
+    margin-right: -1rem;
+    max-width: 50%;
+  }
+
+  .header-wrapper{
+    height: 115vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 4rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 120%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 36%;
+    font-size: 2.5rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: -10%;
+  }
+
+  .title p{
+    font-size: 7.5rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 10px 0;
+  }
+
+  .marquee-content img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .marquee-content-oppo img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .video-section{
+    height: 80vh;
+    margin-top: 2rem;
+  }
+
+  .video-section ul{
+    bottom: -200px;
+  }
+  
+  .video-section ul li video{
+    width: 250px;
+  }
+
+  .diverse-interest{
+    height: 120vh;
+  }
+  
+  .diverse-interest p{
+    top: 15%;
+    font-size: 3rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 6rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 6rem; 
+  }
+  .orange-right{
+    height: 83vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 60%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 2rem;
+  }
+  
+  .black-float{
+    height: 35vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 35vh;
+    font-size: 2.3rem;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 23vh;
+  } 
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 25vh;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 60vh;
+  }
+
+  .user-employee{
+    padding: 0 10px;
+  }
+
+  .user-employee p{
+    font-size: 1.7rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 33%;
+    top: 20%;
+  }
+
+  .left-about-us p .something{
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 3rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 6rem;
+    margin-left: -2rem;
+  }
+} */
+
+@media (min-width: 1440px) and (max-width: 1919px){
+
+  .sub-menu-wrap{
+    width: 50%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: .5rem;
+    margin-right: -1rem;
+    max-width: 50%;
+  }
+  
+  .sub-menu-wrap.open-menu{
+    max-height: 200px;
+  }
+  
+  .sub-menu{
+    background-color: orangered;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  
+  .sub-menu-link{
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+  }
+  
+  .sub-menu-link p{
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.25s ease;
+  }
+  
+  .sub-menu-link p span{
+    color: white;
+  }
+  
+  .sub-menu-link p:hover{
+    background-color: black;
+    color: orangered;
+    width: 100%;
+  }
+
+  .header-wrapper{
+    height: 130vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 4rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 130%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 36%;
+    font-size: 2.5rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: -10%;
+  }
+
+  .title p{
+    margin-top: 10%;
+    font-size: 7.5rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 10px 0;
+  }
+
+  .marquee-content img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .marquee-content-oppo img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .video-section{
+    height: 80vh;
+    margin-top: 2rem;
+  }
+
+  .video-section ul{
+    bottom: -200px;
+  }
+  
+  .video-section ul li video{
+    width: 250px;
+  }
+
+  .diverse-interest{
+    height: 120vh;
+  }
+  
+  .diverse-interest p{
+    top: 15%;
+    font-size: 3rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 6rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 6rem; 
+  }
+  .orange-right{
+    height: 85vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 60%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 2rem;
+  }
+  
+  .black-float{
+    height: 35vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 35vh;
+    font-size: 2.3rem;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .slider_two{
+    margin-top: 5%;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 23vh;
+  } 
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 25vh;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 60vh;
+  }
+
+  .user-employee{
+    padding: 0 10px;
+  }
+
+  .user-employee p{
+    font-size: 1.7rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 33%;
+    top: 20%;
+  }
+
+  .left-about-us p .something{
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 3rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 6rem;
+    margin-left: -2rem;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px){
+
+  .sub-menu-wrap{
+    width: 50%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: .5rem;
+    margin-right: -1rem;
+    max-width: 50%;
+  }
+  
+  .sub-menu-wrap.open-menu{
+    max-height: 1000px;
+  }
+  
+  .sub-menu{
+    background-color: orangered;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  
+  .sub-menu-link{
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+  }
+  
+  .sub-menu-link p{
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.25s ease;
+  }
+  
+  .sub-menu-link p span{
+    color: white;
+  }
+  
+  .sub-menu-link p:hover{
+    background-color: black;
+    color: orangered;
+    width: 100%;
+  }
+
+  .header-wrapper{
+    height: 110vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 4rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 130%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 36%;
+    font-size: 2.5rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: -10%;
+  }
+
+  .title p{
+    font-size: 7.5rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 10px 0;
+  }
+
+  .marquee-content img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .marquee-content-oppo img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .video-section{
+    height: 80vh;
+    margin-top: 2rem;
+  }
+
+  .video-section ul{
+    bottom: -200px;
+  }
+  
+  .video-section ul li video{
+    width: 250px;
+  }
+
+  .diverse-interest{
+    height: 105vh;
+  }
+  
+  .diverse-interest p{
+    top: 15%;
+    font-size: 3rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 6rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 6rem; 
+  }
+  .orange-right{
+    height: 80vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 60%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 2rem;
+  }
+  
+  .black-float{
+    height: 35vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 35vh;
+    font-size: 2.3rem;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 23vh;
+  } 
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 25vh;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 40vh;
+  }
+
+  .user-employee{
+    padding: 0 10px;
+  }
+
+  .user-employee p{
+    font-size: 1.4rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 33%;
+    top: 20%;
+  }
+
+  .left-about-us p .something{
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 3rem;
+    margin-left: -2rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 6rem;
+    margin-left: -2rem;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3129px){
+
+  .sub-menu-wrap{
+    width: 50%;
+    margin-right: -10px;
+  }
+
+  .user-info img{
+    margin-top: .5rem;
+    margin-right: -1rem;
+    max-width: 60%;
+  }
+  
+  .sub-menu-wrap.open-menu{
+    max-height: 1000px;
+  }
+  
+  .sub-menu{
+    background-color: orangered;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  
+  .sub-menu-link{
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+  }
+  
+  .sub-menu-link p{
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.25s ease;
+  }
+  
+  .sub-menu-link p span{
+    color: white;
+  }
+  
+  .sub-menu-link p:hover{
+    background-color: black;
+    color: orangered;
+    width: 100%;
+  }
+
+  .header-wrapper{
+    height: 65vh;
+  }
+
+  .orange-left-side{
+    width: 100%;
+    height: 50vh;
+  }
+
+  .orange-left-side .orange-left-side-inner{
+    font-size: 4rem;
+  }
+
+  .orange-left-side .group-pic{
+    max-width: 130%;
+    margin-top: 1.5rem;
+  }
+
+  .orange-left-side p{
+    top: 36%;
+    font-size: 2.5rem;
+  }
+
+  .logo{
+    width: 4%;
+    top: 15px;
+    right: 5%;
+  }
+
+  .blank{
+    margin-top: 0;
+  }
+
+  .title p{
+    font-size: 7.5rem;
+  }
+
+  .marquee {
+    width: 90vw;
+    padding: 10px 0;
+  }
+
+  .marquee-content {
+    margin-left: -400px;
+  }
+
+  .marquee-content img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .marquee-content-oppo img{
+    height: 250px;
+    margin: 0 10px;
+  }
+
+  .video-section{
+    height: 55vh;
+    margin-top: 2rem;
+  }
+
+  .video-section ul{
+    bottom: -280px;
+  }
+  
+  .video-section ul li video{
+    width: 250px;
+  }
+
+  .diverse-interest{
+    height: 65vh;
+  }
+  
+  .diverse-interest p{
+    top: 15%;
+    font-size: 3rem;
+  }
+  
+  .diverse-interest .diverse-black{
+    font-size: 6rem;
+  }
+  
+  .diverse-interest .interest-orange{
+    font-size: 6rem; 
+  }
+  .orange-right{
+    height: 55vh;
+    margin-bottom: 0px;
+  }
+  
+  .orange-right-img img{
+    width: 70%;
+  }
+  
+  .orange-right-text{
+    top: 55%;
+    font-size: 1.8rem;
+  }
+  
+  .black-float{
+    height: 25vh;
+    background-color: black;
+  }
+  
+  .orange-float{
+    width: 65%;
+    height: 25vh;
+    font-size: 2.3rem;
+  }
+  
+  .orange-float p{
+    color: white;
+    line-height: 1.2;
+  }
+
+  .marquee_two {
+    width: 90vw;
+    height: 14vh;
+  } 
+
+  .marquee-content_two {
+    margin-left: -400px;
+  }
+
+  .marquee-content-oppo_two {
+    margin-left: -300px;
+  }
+  
+  .worked-with{
+    margin-top: 10px;
+  }
+  
+  .worked-with p{
+    font-size: 2.5em;
+  }
+  
+  .logo-box{
+    height: 15vh;
+  }
+
+  .black-float-two{
+    z-index: 50;
+  }
+
+  .orange-float-two{
+    width: 95%;
+  }
+
+  .employee-diag{
+    width: 100%;
+    height: 25vh;
+  }
+
+  .user-employee{
+    padding: 0 10px;
+  }
+
+  .user-employee p{
+    font-size: 1.4rem;
+    margin-left: 4rem;
+  }
+
+  .user-employee p::before{
+    font-size: 5rem;
+  }
+  
+  .user-employee p::after{
+    font-size: 5rem;
+    vertical-align: -40px;
+  }
+
+  .left-about-us{
+    width: 33%;
+  }
+
+  .black-small-shadow{
+    width: 33%;
+    top: 10%;
+  }
+
+  .left-about-us p .something{
+    font-size: 2rem;
+    margin-left: 15rem;
+  }
+  
+  .left-about-us p .about{
+    font-size: 3rem;
+    margin-left: 15rem;
+  }
+  
+  .left-about-us p .us{
+    font-size: 6rem;
+    margin-left: 15rem;
+  }
+
+  .footer-top{
+    height: 2vh;
+  }
+
+  footer{
+    height: 20vh;
+  }
+}
+
